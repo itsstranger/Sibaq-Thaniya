@@ -5,6 +5,19 @@
     font-family: Helvetica;
     /* overflow: hidden; */
 }
+:root{
+    --prime:rgb(128,0,128);
+    --sec:#e6d300;
+}
+body{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    overscroll-behavior: none;
+  }
+
+body::-webkit-scrollbar {
+    display: none;
+  }
 .lg{
     width: 100px;
     padding: 10px;
@@ -13,10 +26,11 @@
 .banner{
     background: linear-gradient(rgba(128,0,128,0.75),rgba(128,0,128,0.75)), url(./imgs/DSC03089.JPG);
     min-height: 100vh;
-    min-width: 100vw;
+    width: 100vw;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+    overflow: hidden;
 }
 .navbar{
     position: fixed;
@@ -28,6 +42,7 @@
     align-items: center;
     /* gap: 50vw; */
     z-index: 2;
+    overflow: hidden;
 }
 .navli{
     display: inline;
@@ -82,6 +97,8 @@
     gap: 2vw;
     padding: 5vw;
     text-align: justify;
+    overflow: hidden;
+    background-color: #e6d300;
 
 }
 .mqpnb{
@@ -90,19 +107,56 @@
 
 .results::before{
     content: '';
-    height: 20px;
+    height: 10px;
     width: 100%;
-    background: #ffea00;
+    background: #ffffff;
     position: absolute;
     left: 0;
     bottom: 0;
     top: 0;
     z-index: 0;
 }
-.yt{
-    width: auto;
+/* .yt{
+    width: 150px;
     height: auto;
+} */
+.ulog{
+    height: 200px;
+    width: auto;
 }
+
+.result{
+    min-height: 384px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(./imgs/art1.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* .result::before{
+    content: '';
+    height: 20px;
+    width: 100%;
+    background: var(--prime);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 0;
+} */
+.mr{
+    color: white;
+    font-size: 50px;
+}
+.mrd{
+    padding: 30px;
+}
+
+
+
+
 @media screen and (max-width:660px) {
     .navli{
         display: none;
@@ -124,5 +178,15 @@
     .results{
         text-align: justify;
         flex-wrap: wrap;
+    }
+    .result{
+        height: 50px;
+    }
+    .mr{
+        color: white;
+        font-size: 30px;
+    }
+    .mrd{
+        padding: 10px;
     }
 }
