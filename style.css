@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    /* overflow: hidden; */
+}
+.lg{
+    width: 100px;
+    padding: 10px;
+    /* margin: 0 0 0 50px; */
+}
+.banner{
+    background: linear-gradient(rgba(128,0,128,0.75),rgba(128,0,128,0.75)), url(./imgs/DSC03089.JPG);
+    min-height: 100vh;
+    min-width: 100vw;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.navbar{
+    position: fixed;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* gap: 50vw; */
+    z-index: 2;
+}
+.navli{
+    display: inline;
+    list-style: none;
+}
+.navli li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    
+}
+.navli li a{
+    color: white;
+    font-size: large;
+    text-decoration: none;
+}
+.lgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+.lgscon{
+    width: 550px;
+    /* height: 300px; */
+    
+}
+.cil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.nlg{
+    display: flex;
+    align-items: center;
+    gap: 2vw
+}
+.title{
+    color: white;
+    ;
+}
+.results{
+    min-height: 384px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    padding: 5vw;
+    text-align: justify;
+
+}
+.mqpnb{
+    display: none;
+}
+
+.results::before{
+    content: '';
+    height: 20px;
+    width: 100%;
+    background: #ffea00;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 0;
+}
+.yt{
+    width: auto;
+    height: auto;
+}
+@media screen and (max-width:660px) {
+    .navli{
+        display: none;
+    
+    }
+    .mqpnb{
+        display: unset;
+        color: white;
+    }
+    .lg{
+        width: 80px;}
+    svg{
+        fill: white;
+        /* stroke: white; */
+    }
+    .title{
+        font-size: 20px;
+    }
+    .results{
+        text-align: justify;
+        flex-wrap: wrap;
+    }
+}
